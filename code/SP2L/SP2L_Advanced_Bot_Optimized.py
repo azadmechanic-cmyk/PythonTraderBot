@@ -60,7 +60,7 @@ def internet(host="8.8.8.8", port=53, timeout=3):
 # SETTINGS
 # ============================================================
 
-SYMBOL = "XAUUSD"
+SYMBOL = "XAUUSD.ec"
 TIMEFRAME = mt5.TIMEFRAME_M1
 NUMBER_OF_DATA = 500
 
@@ -153,7 +153,7 @@ SESSION_TIMEZONE = "America/New_York"
 
 MAGIC = 8
 SECOND_ENTRY_MAGIC = 9
-LOT = 0.01
+LOT = 0.05
 
 LOOP_SECONDS = 0.5
 
@@ -1956,7 +1956,7 @@ def Strategy(
                                     pending_price=new_limit_price,
                                     pending_sl=sl,
                                     pending_tp=replacement_tp,
-                                    pending_comment="SP2L Limit Entry"
+                                    pending_comment="GOOLD Limit Entry"
                                 )
                                 replacement_retcode = getattr(replacement_result, "retcode", None) if replacement_result is not None else None
                                 replacement_is_order = (
@@ -2266,7 +2266,7 @@ def _news_close_position(position):
         "position": int(position.ticket),
         "price": close_price,
         "deviation": 20,
-        "comment": "SP2L NEWS FILTER CLOSE"
+        "comment": "GOOLDL NEWS FILTER CLOSE"
     }
 
     result = mt5.order_send(request)
@@ -3100,7 +3100,7 @@ while True:
                         pending_price=limit_price,
                         pending_sl=sl,
                         pending_tp=tp,
-                        pending_comment="SP2L Limit Entry"
+                        pending_comment="GOOLD Limit Entry"
                     )
 
                     result_retcode = getattr(result, "retcode", None) if result is not None else None
