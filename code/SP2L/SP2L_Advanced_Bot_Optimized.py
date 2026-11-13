@@ -154,7 +154,7 @@ SESSION_TIMEZONE = "America/New_York"
 # (broker/server/chart time). No timezone conversion is performed.
 # Default: block new entries every day from 11:00 through 13:59(end_time=14:00).(winterTimeAlpari)
 # Default: block new entries every day from 12:00 through 14:59(end_time=15:00).(summerTimeAlpari)
-USE_NO_TRADE_TIME_FILTER = True
+USE_NO_TRADE_TIME_FILTER = False
 NO_TRADE_START_TIME = "11:00"
 NO_TRADE_END_TIME = "14:00"
 
@@ -212,7 +212,7 @@ DURATION_STAGE3_CANDLES = 11
 
 MAGIC = 8
 SECOND_ENTRY_MAGIC = 9
-LOT = 0.01
+LOT = 0.05
 
 LOOP_SECONDS = 0.5
 
